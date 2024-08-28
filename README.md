@@ -102,23 +102,20 @@ Before you begin, ensure you have met the following requirements:
    Use the service name as the prefix of variable.
 
 ## Usage
-
-1. Start the development server:
-    ```typescript
-    import { CompanyService } from 'labamu-api-client';
-
+```typescript
+import { CompanyService } from 'labamu-api-client';
     async function fetchCompanyDetails(slug: string) {
-        const companyService = new CompanyService();
+        const companyClient = new CompanyService();
         try {
-            const companyDetail = await companyService.getBySlug(slug);
+            const companyDetail = await companyClient.getBySlug(slug);
             console.log('Company Detail:', companyDetail);
         } catch (error) {
             console.error('Error fetching company details:', error);
         }
     }
     
-    fetchCompanyDetails('example-slug');
-    ```
+fetchCompanyDetails('example-slug');
+```
 
 ### Change Log
 
