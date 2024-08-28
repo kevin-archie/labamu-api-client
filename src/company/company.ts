@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export class CompanyService {
+export class CompanyClient {
 	private axiosInstance: AxiosInstance;
 
 	constructor() {
